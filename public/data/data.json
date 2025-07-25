@@ -1,0 +1,56 @@
+{
+  "skills": [
+    { "name": "JavaScript", "level": "Advanced", "icon": "fab fa-js-square", "color": "text-yellow-400" },
+    { "name": "Node.js", "level": "Advanced", "icon": "fab fa-node-js", "color": "text-green-500" },
+    { "name": "HTML5", "level": "Expert", "icon": "fab fa-html5", "color": "text-orange-500" },
+    { "name": "CSS3", "level": "Expert", "icon": "fab fa-css3-alt", "color": "text-blue-500" },
+    { "name": "React", "level": "Advanced", "icon": "fab fa-react", "color": "text-cyan-400" },
+    { "name": "Python", "level": "Intermediate", "icon": "fab fa-python", "color": "text-green-400" },
+    { "name": "Git", "level": "Advanced", "icon": "fab fa-git-alt", "color": "text-red-500" },
+    { "name": "Vue.js", "level": "Basic", "icon": "fab fa-vuejs", "color": "text-emerald-400" }
+  ],
+  "projects": [
+    {
+      "title": "POWER OF HTML",
+      "subtitle": "EXPLORE THE CORE",
+      "description": "HTML TUTORIAL",
+      "image": "images/html-project.webp",
+      "category": "Web Development",
+      "link": "#"
+    },
+    {
+      "title": "UNLOCK CSS MAGIC",
+      "subtitle": "STYLE WITH MAGIC",
+      "description": "CSS TUTORIAL",
+      "image": "images/css-project.webp",
+      "category": "Web Development",
+      "link": "#"
+    }
+  ],
+  "workExperience": [
+    {
+      "company": "Google",
+      "position": "Lead Software Engineer",
+      "period": "Nov 2018 - Present",
+      "logo": "fab fa-google",
+      "logoColor": "text-blue-500",
+      "description": "As a Senior Software Engineer at Google, I played a pivotal role in developing innovative solutions for Google's core search algorithms. Collaborating with a dynamic team of engineers, I contributed to the enhancement of search accuracy and efficiency, optimizing user experiences for millions of users worldwide."
+    },
+    {
+      "company": "Apple",
+      "position": "Junior Software Engineer",
+      "period": "Jan 2018 - Dec 2017",
+      "logo": "fab fa-apple",
+      "logoColor": "text-gray-300",
+      "description": "During my tenure at Apple, I held the role of Software Architect, where I played a key role in shaping the architecture of mission-critical software projects. Responsible for designing scalable and efficient systems, I ensured technical excellence to meet the business demands."
+    },
+    {
+      "company": "Meta",
+      "position": "Software Engineer",
+      "period": "Jan 2017 - Oct 2016",
+      "logo": "fab fa-meta",
+      "logoColor": "text-blue-400",
+      "description": "At Meta, I served as a Software Engineer working on the design and implementation of backend systems for the social media giant's dynamic platform. Working on projects that involved large-scale data processing and user engagement features, I leveraged my expertise to ensure seamless functionality and scalability."
+    }
+  ]
+}
