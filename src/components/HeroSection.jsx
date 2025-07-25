@@ -1,6 +1,6 @@
 import React from 'react';
 
-const HeroSection = React.forwardRef(({ skills, scrollToContact }, ref) => (
+const HeroSection = React.forwardRef(({ profile = {}, skills = [], scrollToContact }, ref) => (
   <section
     ref={ref}
     className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 min-h-screen flex items-center"
@@ -8,25 +8,38 @@ const HeroSection = React.forwardRef(({ skills, scrollToContact }, ref) => (
     <div className="max-w-4xl mx-auto text-center">
       {/* Avatar */}
       <div className="mb-8">
-        <div className="w-32 h-32 mx-auto mb-8 relative">
+        <div className="w-40 h-40 sm:w-48 sm:h-48 mx-auto mb-8 relative">
           <div className="w-full h-full rounded-full bg-gradient-to-br from-pink-500 via-purple-500 to-orange-500 p-1">
-            <div className="w-full h-full rounded-full bg-gray-800 flex items-center justify-center text-4xl">
-              <i className="fas fa-user-tie text-white" />
-            </div>
+            {profile.avatar ? (
+              <img
+                src={`/${profile.avatar}`}
+                alt={profile.name || 'Avatar'}
+                className="w-full h-full rounded-full object-cover"
+              />
+            ) : (
+              <div className="w-full h-full rounded-full bg-gray-800 flex items-center justify-center text-4xl">
+                <i className="fas fa-user-tie text-white" />
+              </div>
+            )}
           </div>
         </div>
       </div>
 
       {/* Heading */}
       <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-        I do code and
+        {profile.name || 'Your Name'}
         <br />
-        make content <span className="text-orange-400">about it!</span>
+        <span
+          className="text-orange-400 text-3xl md:text-4xl lg:text-6xl whitespace-nowrap"
+        >
+          {profile.role || 'Your Role'}
+        </span>
       </h1>
 
       {/* Description */}
       <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed">
-        I am a seasoned full-stack software engineer with over 6 years of professional experience, specializing in backend development. My expertise lies in crafting robust and scalable SaaS-based architectures on the Amazon AWS platform.
+        {profile.description ||
+          'Passionate developer eager to create amazing applications.'}
       </p>
 
       {/* Buttons */}

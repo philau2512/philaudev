@@ -5,6 +5,7 @@ import ProjectsSection from '../components/ProjectsSection.jsx';
 import ExperienceSection from '../components/ExperienceSection.jsx';
 import ContactSection from '../components/ContactSection.jsx';
 import FooterSection from '../components/FooterSection.jsx';
+import EducationSection from '../components/EducationSection.jsx';
 
 function Portfolio() {
   const [activeSection, setActiveSection] = useState('home');
@@ -14,6 +15,7 @@ function Portfolio() {
   const projectsRef = useRef(null);
   const experienceRef = useRef(null);
   const contactRef = useRef(null);
+  const educationRef = useRef(null);
 
   const scrollToSection = (sectionId) => {
     const refs = {
@@ -27,17 +29,21 @@ function Portfolio() {
   };
 
   // Data states loaded from external JSON
+  const [profile, setProfile] = useState({});
   const [skills, setSkills] = useState([]);
   const [projects, setProjects] = useState([]);
   const [workExperience, setWorkExperience] = useState([]);
+  const [education, setEducation] = useState([]);
 
   useEffect(() => {
     fetch('/data/data.json')
       .then((res) => res.json())
       .then((data) => {
+        setProfile(data.profile || {});
         setSkills(data.skills || []);
         setProjects(data.projects || []);
         setWorkExperience(data.workExperience || []);
+        setEducation(data.education || []);
       })
       .catch((err) => console.error('Failed to load portfolio data:', err));
   }, []);
@@ -48,9 +54,12 @@ function Portfolio() {
 
       <HeroSection
         ref={homeRef}
+        profile={profile}
         skills={skills}
         scrollToContact={() => scrollToSection('contact')}
       />
+
+      <EducationSection ref={educationRef} education={education} />
 
       <ProjectsSection ref={projectsRef} projects={projects} />
 

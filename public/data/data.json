@@ -1,13 +1,59 @@
 {
+  "profile": {
+    "name": "DO PHI LAU",
+    "role": "BACKEND DEVELOPER",
+    "avatar": "images/avatar.jpg",
+    "description": "I am a seasoned full-stack software engineer with over 6 years of professional experience, specializing in backend development. My expertise lies in crafting robust and scalable SaaS-based architectures on the Amazon AWS platform."
+  },
   "skills": [
-    { "name": "JavaScript", "level": "Advanced", "icon": "fab fa-js-square", "color": "text-yellow-400" },
-    { "name": "Node.js", "level": "Advanced", "icon": "fab fa-node-js", "color": "text-green-500" },
-    { "name": "HTML5", "level": "Expert", "icon": "fab fa-html5", "color": "text-orange-500" },
-    { "name": "CSS3", "level": "Expert", "icon": "fab fa-css3-alt", "color": "text-blue-500" },
-    { "name": "React", "level": "Advanced", "icon": "fab fa-react", "color": "text-cyan-400" },
-    { "name": "Python", "level": "Intermediate", "icon": "fab fa-python", "color": "text-green-400" },
-    { "name": "Git", "level": "Advanced", "icon": "fab fa-git-alt", "color": "text-red-500" },
-    { "name": "Vue.js", "level": "Basic", "icon": "fab fa-vuejs", "color": "text-emerald-400" }
+    {
+      "name": "JavaScript",
+      "level": "Advanced",
+      "icon": "fab fa-js-square",
+      "color": "text-yellow-400"
+    },
+    {
+      "name": "Node.js",
+      "level": "Advanced",
+      "icon": "fab fa-node-js",
+      "color": "text-green-500"
+    },
+    {
+      "name": "HTML5",
+      "level": "Expert",
+      "icon": "fab fa-html5",
+      "color": "text-orange-500"
+    },
+    {
+      "name": "CSS3",
+      "level": "Expert",
+      "icon": "fab fa-css3-alt",
+      "color": "text-blue-500"
+    },
+    {
+      "name": "React",
+      "level": "Advanced",
+      "icon": "fab fa-react",
+      "color": "text-cyan-400"
+    },
+    {
+      "name": "Python",
+      "level": "Intermediate",
+      "icon": "fab fa-python",
+      "color": "text-green-400"
+    },
+    {
+      "name": "Git",
+      "level": "Advanced",
+      "icon": "fab fa-git-alt",
+      "color": "text-red-500"
+    },
+    {
+      "name": "Vue.js",
+      "level": "Basic",
+      "icon": "fab fa-vuejs",
+      "color": "text-emerald-400"
+    }
   ],
   "projects": [
     {
@@ -51,6 +97,24 @@
       "logo": "fab fa-meta",
       "logoColor": "text-blue-400",
       "description": "At Meta, I served as a Software Engineer working on the design and implementation of backend systems for the social media giant's dynamic platform. Working on projects that involved large-scale data processing and user engagement features, I leveraged my expertise to ensure seamless functionality and scalability."
+    }
+  ],
+  "education": [
+    {
+      "school": "Stanford University",
+      "degree": "B.S. Computer Science",
+      "period": "2012 - 2016",
+      "gpa": "3.9 / 4.0",
+      "logo": "fas fa-university",
+      "logoColor": "text-red-500"
+    },
+    {
+      "school": "Massachusetts Institute of Technology",
+      "degree": "M.S. Software Engineering",
+      "period": "2016 - 2018",
+      "gpa": "4.0 / 4.0",
+      "logo": "fas fa-graduation-cap",
+      "logoColor": "text-yellow-400"
     }
   ]
 }
