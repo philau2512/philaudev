@@ -9,11 +9,20 @@ const EducationSection = React.forwardRef(({ education }, ref) => (
 
       <div className="space-y-6 md:space-y-8">
         {education.map((edu, index) => (
-          <div key={index} className="flex items-start md:items-center gap-4 md:gap-6 bg-gray-800/40 p-4 md:p-6 rounded-lg border border-gray-700">
+          <div
+            key={index}
+            className="group flex items-start md:items-center gap-4 md:gap-6 bg-gray-800/40 p-4 md:p-6 rounded-lg border border-gray-700 transition-all duration-300 transform hover:scale-[1.02] hover:border-green-400 hover:bg-gray-800/60 hover:shadow-lg"
+          >
             {/* Logo */}
             <div className="flex-shrink-0">
-              <div className="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center text-xl border-2 border-gray-600">
-                <i className={`${edu.logo} ${edu.logoColor}`} />
+              <div
+                className="w-14 h-14 md:w-16 md:h-16 rounded-full overflow-hidden border-2 border-gray-600 transition-all duration-300 transform group-hover:scale-110 group-hover:border-green-400"
+              >
+                <img
+                  src={`/${edu.logo}`}
+                  alt={edu.school}
+                  className="w-full h-full object-cover rounded-full"
+                />
               </div>
             </div>
 

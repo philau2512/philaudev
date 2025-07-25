@@ -16,6 +16,7 @@ function Portfolio() {
   const experienceRef = useRef(null);
   const contactRef = useRef(null);
   const educationRef = useRef(null);
+  const [showScrollTop, setShowScrollTop] = useState(false);
 
   const scrollToSection = (sectionId) => {
     const refs = {
@@ -48,6 +49,58 @@ function Portfolio() {
       .catch((err) => console.error('Failed to load portfolio data:', err));
   }, []);
 
+  // Show scroll-to-top button when near bottom
+  useEffect(() => {
+    const handleScroll = () => {
+      const { innerHeight, scrollY } = window;
+      const { scrollHeight } = document.documentElement;
+      // Show when within 300px of bottom
+      if (innerHeight + scrollY >= scrollHeight - 300) {
+        setShowScrollTop(true);
+      } else {
+        setShowScrollTop(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  // Observe sections to update active nav on scroll
+  useEffect(() => {
+    const sections = [
+      { id: 'home', ref: homeRef },
+      { id: 'projects', ref: projectsRef },
+      { id: 'experience', ref: experienceRef },
+      { id: 'contact', ref: contactRef },
+    ];
+
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.3,
+    };
+
+    const observerCallback = (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const section = sections.find((s) => s.ref.current === entry.target);
+          if (section) {
+            setActiveSection(section.id);
+          }
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+    sections.forEach(({ ref }) => {
+      if (ref.current) observer.observe(ref.current);
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <NavBar activeSection={activeSection} scrollToSection={scrollToSection} />
@@ -68,6 +121,16 @@ function Portfolio() {
       <ContactSection ref={contactRef} />
 
       <FooterSection />
+
+      {showScrollTop && (
+        <button
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          className="fixed bottom-20 right-5 md:bottom-24 md:right-8 w-10 h-10 flex items-center justify-center bg-gray-800 border border-gray-700 text-orange-400 hover:bg-gray-700 transition-colors duration-300 rounded-full shadow-lg z-40"
+          aria-label="Scroll to top"
+        >
+          <i className="fas fa-arrow-up" />
+        </button>
+      )}
     </div>
   );
 }

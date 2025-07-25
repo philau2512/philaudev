@@ -30,7 +30,7 @@ const HeroSection = React.forwardRef(({ profile = {}, skills = [], scrollToConta
         {profile.name || 'Your Name'}
         <br />
         <span
-          className="text-orange-400 text-3xl md:text-4xl lg:text-6xl whitespace-nowrap"
+          className="text-orange-400 text-2xl md:text-3xl lg:text-5xl whitespace-nowrap"
         >
           {profile.role || 'Your Role'}
         </span>

@@ -101,20 +101,20 @@
   ],
   "education": [
     {
-      "school": "Stanford University",
-      "degree": "B.S. Computer Science",
-      "period": "2012 - 2016",
-      "gpa": "3.9 / 4.0",
-      "logo": "fas fa-university",
-      "logoColor": "text-red-500"
+      "school": "HCM City University of Science",
+      "degree": "Information Technology",
+      "period": "2024-2027",
+      "gpa": "",
+      "logo": "images/hcmus.jpg",
+      "logoColor": "text-yellow-400"
     },
     {
-      "school": "Massachusetts Institute of Technology",
-      "degree": "M.S. Software Engineering",
-      "period": "2016 - 2018",
-      "gpa": "4.0 / 4.0",
-      "logo": "fas fa-graduation-cap",
-      "logoColor": "text-yellow-400"
+      "school": "University of Medicine and Pharmacy at HCMC",
+      "degree": "Laboratory Medicine Technique",
+      "period": "2020 - 2024",
+      "gpa": "",
+      "logo": "images/ump.png",
+      "logoColor": "text-red-500"
     }
   ]
 }
