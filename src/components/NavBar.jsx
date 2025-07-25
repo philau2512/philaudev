@@ -10,12 +10,12 @@ function NavBar({ activeSection, scrollToSection }) {
     {
       code: 'en',
       label: 'English',
-      flag: '/images/flag-us.png', // add or replace with your flag path
+      flag: '/images/flag-us.webp',
     },
     {
       code: 'vi',
       label: 'Việt Nam',
-      flag: '/images/flag-vn.webp', // add or replace with your flag path
+      flag: '/images/flag-vn.webp',
     },
   ];
 
@@ -81,7 +81,7 @@ function NavBar({ activeSection, scrollToSection }) {
                       language === lang.code ? 'text-orange-400' : 'text-gray-300'
                     }`}
                   >
-                    <img src={lang.flag} alt={lang.code} className="w-4 h-4 rounded-full object-cover" />
+                    <img src={lang.flag} alt={lang.code} className="w-6 h-4 object-cover" />
                     {lang.label}
                   </button>
                 ))}
@@ -126,7 +126,7 @@ function NavBar({ activeSection, scrollToSection }) {
                     language === lang.code ? 'bg-gray-800 text-orange-400' : 'text-gray-300'
                   }`}
                 >
-                  <img src={lang.flag} alt={lang.code} className="w-4 h-4 rounded-full object-cover" />
+                  <img src={lang.flag} alt={lang.code} className="w-6 h-4 object-cover" />
                   {lang.label}
                 </button>
               ))}
