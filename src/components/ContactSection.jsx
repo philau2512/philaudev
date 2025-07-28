@@ -5,7 +5,7 @@ const ContactSection = React.forwardRef((props, ref) => (
     <div className="max-w-4xl mx-auto text-center">
       <h2 className="text-4xl md:text-5xl font-bold mb-8">Contact</h2>
       <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
-        Seasoned full-stack software engineer with over 8 years of hands-on experience in designing and implementing robust, scalable, and innovative web solutions. Adept at leveraging cutting-edge technologies and best practices.
+      If you have any questions or concerns about me, please do not hesitate to contact me via the information below.
       </p>
 
       <div className="mb-8">

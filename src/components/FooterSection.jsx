@@ -6,7 +6,7 @@ function FooterSection() {
       <div className="max-w-4xl mx-auto text-center text-gray-400">
         <p>
           <i className="far fa-copyright mr-2" />
-          2025 Developer Portfolio. All rights reserved.
+           Phi Lau Portfolio. All rights reserved.
         </p>
       </div>
     </footer>

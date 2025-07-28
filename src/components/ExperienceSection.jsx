@@ -11,8 +11,12 @@ const ExperienceSection = React.forwardRef(({ workExperience }, ref) => (
         {workExperience.map((job, index) => (
           <div key={index} className="flex gap-6 group">
             <div className="flex flex-col items-center">
-              <div className="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center text-xl border-2 border-gray-600 group-hover:border-orange-400 transition-colors duration-300">
-                <i className={`${job.logo} ${job.logoColor}`} />
+              <div className="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center text-xl border-2 border-gray-600 group-hover:border-orange-400 transition-colors duration-300 overflow-hidden">
+                {job.logo.startsWith('http') || job.logo.startsWith('/') ? (
+                  <img src={job.logo} alt={job.company} className="w-full h-full object-cover object-center" />
+                ) : (
+                  <i className={`${job.logo} ${job.logoColor}`}></i>
+                )}
               </div>
               {index < workExperience.length - 1 && (
                 <div className="w-0.5 h-20 bg-gray-700 mt-4" />
