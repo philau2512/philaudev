@@ -1,6 +1,21 @@
 import React from 'react';
+import { useState } from 'react';
 
-const HeroSection = React.forwardRef(({ profile = {}, skills = [], scrollToContact }, ref) => (
+const HeroSection = React.forwardRef(({ profile = {}, skills = [], scrollToContact }, ref) => {
+  const [expandedDescription, setExpandedDescription] = useState(false);
+  
+  // Function to truncate text to a certain length
+  const truncateText = (text, maxLength) => {
+    if (!text || text.length <= maxLength) return text;
+    return text.substr(0, maxLength) + '...';
+  };
+  
+  // Get the description text
+  const descriptionText = profile.description || 'Passionate developer eager to create amazing applications.';
+  const truncatedDescription = truncateText(descriptionText, 150);
+  const shouldTruncate = descriptionText.length > 150;
+
+  return (
   <section
     ref={ref}
     className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 min-h-screen flex items-center"
@@ -37,10 +52,28 @@ const HeroSection = React.forwardRef(({ profile = {}, skills = [], scrollToConta
       </h1>
 
       {/* Description */}
-      <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed">
-        {profile.description ||
-          'Passionate developer eager to create amazing applications.'}
-      </p>
+      <div className="mb-8 max-w-2xl mx-auto text-center">
+        <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
+          {expandedDescription || !shouldTruncate ? descriptionText : truncatedDescription}
+        </p>
+        
+        {shouldTruncate && (
+          <button 
+            onClick={() => setExpandedDescription(!expandedDescription)}
+            className="mt-3 text-orange-400 hover:text-orange-300 text-sm font-medium transition-colors duration-300 inline-flex items-center mx-auto"
+          >
+            {expandedDescription ? (
+              <>
+                Show Less <i className="fas fa-chevron-up ml-1.5 text-xs"></i>
+              </>
+            ) : (
+              <>
+                Read More <i className="fas fa-chevron-down ml-1.5 text-xs"></i>
+              </>
+            )}
+          </button>
+        )}
+      </div>
 
       {/* Buttons */}
       <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -80,6 +113,6 @@ const HeroSection = React.forwardRef(({ profile = {}, skills = [], scrollToConta
       </div>
     </div>
   </section>
-));
+)});
 
 export default HeroSection; 

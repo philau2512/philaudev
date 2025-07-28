@@ -3,7 +3,7 @@
     "name": "DO PHI LAU",
     "role": "BACKEND DEVELOPER",
     "avatar": "images/avatar.jpg",
-    "description": "I am a seasoned full-stack software engineer with over 6 years of professional experience, specializing in backend development. My expertise lies in crafting robust and scalable SaaS-based architectures on the Amazon AWS platform."
+    "description": "I am a software developer with hands-on experience in both web and blockchain development. I have worked on both front-end and back-end, and thrive in agile environments. With over a year of experience, and projects both large and small, I look forward to continuing to grow in the technology field and contributing to innovative projects."
   },
   "skills": [
     {
@@ -55,50 +55,6 @@
       "color": "text-emerald-400"
     }
   ],
-  "projects": [
-    {
-      "title": "POWER OF HTML",
-      "subtitle": "EXPLORE THE CORE",
-      "description": "HTML TUTORIAL",
-      "image": "images/html-project.webp",
-      "category": "Web Development",
-      "link": "#"
-    },
-    {
-      "title": "UNLOCK CSS MAGIC",
-      "subtitle": "STYLE WITH MAGIC",
-      "description": "CSS TUTORIAL",
-      "image": "images/css-project.webp",
-      "category": "Web Development",
-      "link": "#"
-    }
-  ],
-  "workExperience": [
-    {
-      "company": "Google",
-      "position": "Lead Software Engineer",
-      "period": "Nov 2018 - Present",
-      "logo": "fab fa-google",
-      "logoColor": "text-blue-500",
-      "description": "As a Senior Software Engineer at Google, I played a pivotal role in developing innovative solutions for Google's core search algorithms. Collaborating with a dynamic team of engineers, I contributed to the enhancement of search accuracy and efficiency, optimizing user experiences for millions of users worldwide."
-    },
-    {
-      "company": "Apple",
-      "position": "Junior Software Engineer",
-      "period": "Jan 2018 - Dec 2017",
-      "logo": "fab fa-apple",
-      "logoColor": "text-gray-300",
-      "description": "During my tenure at Apple, I held the role of Software Architect, where I played a key role in shaping the architecture of mission-critical software projects. Responsible for designing scalable and efficient systems, I ensured technical excellence to meet the business demands."
-    },
-    {
-      "company": "Meta",
-      "position": "Software Engineer",
-      "period": "Jan 2017 - Oct 2016",
-      "logo": "fab fa-meta",
-      "logoColor": "text-blue-400",
-      "description": "At Meta, I served as a Software Engineer working on the design and implementation of backend systems for the social media giant's dynamic platform. Working on projects that involved large-scale data processing and user engagement features, I leveraged my expertise to ensure seamless functionality and scalability."
-    }
-  ],
   "education": [
     {
       "school": "HCM City University of Science",
@@ -115,6 +71,44 @@
       "gpa": "",
       "logo": "images/ump.png",
       "logoColor": "text-red-500"
+    }
+  ],
+  "projects": [
+    {
+      "title": "LIBRARY MANAGEMENT SYSTEM",
+      "subtitle": "",
+      "description": "A web application for managing library resources, including books, users, and borrowing transactions. It provides a user-friendly interface for librarians to manage library operations efficiently.",
+      "image": "images/html-project.webp",
+      "category": "Web Development",
+      "size": "Team Project",
+      "link": "#"
+    },
+    {
+      "title": "UNLOCK CSS MAGIC",
+      "subtitle": "STYLE WITH MAGIC",
+      "description": "CSS TUTORIAL",
+      "image": "images/css-project.webp",
+      "category": "Web Development",
+      "size": "Personal Project",
+      "link": "#"
+    }
+  ],
+  "workExperience": [
+    {
+      "company": "Apps Cyclone Technology JSC",
+      "position": "Intern Blockchain Developer",
+      "period": "02/06/2025 - 01/08/2025",
+      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnYaC5vYTJwqOy8D4299n6xFy8cLbGeTFZbQ&s",
+      "logoColor": "text-blue-500",
+      "description": "Worked as a blockchain programming intern on the NFT Sale Whitelist project, utilizing Solidity for smart contract development. Managed a list of eligible users for participation in NFT sales, ensuring only verified users, meeting specific criteria, were granted access to purchase NFTs during limited sales."
+    },
+    {
+      "company": "LIKELION",
+      "position": "K-Tech College 2025",
+      "period": "01/07/2025 - 30/09/2025",
+      "logo": "https://ktc.likelion.edu.vn/apple-icon.png?7007cca3c8db8fbf",
+      "logoColor": "text-gray-300",
+      "description": "Received training in software development using a variety of technologies, while enhancing communication, teamwork, and problem-solving abilities. Contributed to real-world projects, as JobHuntly, gaining hands-on experience in development processes."
     }
   ]
 }
