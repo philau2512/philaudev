@@ -78,18 +78,22 @@
       "title": "LIBRARY MANAGEMENT SYSTEM",
       "subtitle": "",
       "description": "A web application for managing library resources, including books, users, and borrowing transactions. It provides a user-friendly interface for librarians to manage library operations efficiently.",
+      "details": "- Runs on console\n- Manage readers, books and book borrowing/returning forms at the Library.\n- And some basic statistics.\n- Data is saved in txt file.",
       "image": "images/html-project.webp",
-      "category": "Web Development",
-      "size": "Team Project",
-      "link": "#"
+      "size": "Personal",
+      "type": "School Project",
+      "tech": "C/C++",
+      "link": "https://github.com/philau2512/library_manager_2"
     },
     {
-      "title": "UNLOCK CSS MAGIC",
-      "subtitle": "STYLE WITH MAGIC",
-      "description": "CSS TUTORIAL",
+      "title": "JOB HUNTLY",
+      "subtitle": "",
+      "description": "A web application for job seekers to find jobs and apply for them. It provides a user-friendly interface for job seekers to find jobs and apply for them.",
+      "details": "",
       "image": "images/css-project.webp",
-      "category": "Web Development",
-      "size": "Personal Project",
+      "size": "Personal",
+      "type": "Other Project",
+      "tech": "React, Node.js, MongoDB, Tailwind CSS, Java, Spring Boot",
       "link": "#"
     }
   ],

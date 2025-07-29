@@ -1,10 +1,12 @@
 import React, { useState, useRef, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 
 function NavBar({ activeSection, scrollToSection }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [language, setLanguage] = useState("en");
   const [langOpen, setLangOpen] = useState(false);
   const langRef = useRef(null);
+  const location = useLocation();
 
   const languages = [
     {
@@ -31,7 +33,13 @@ function NavBar({ activeSection, scrollToSection }) {
   }, []);
 
   const handleNavClick = (section) => {
-    scrollToSection(section);
+    // If we're on the homepage, scroll to section
+    if (location.pathname === '/') {
+      scrollToSection(section);
+    } else {
+      // Otherwise, navigate to home with hash
+      window.location.href = `/#${section}`;
+    }
     setMenuOpen(false);
   };
 
@@ -48,7 +56,7 @@ function NavBar({ activeSection, scrollToSection }) {
     <nav className="fixed top-0 w-full bg-gray-900/95 backdrop-blur-md border-b border-gray-800 z-50">
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
-          <div className="text-2xl font-bold text-white italic">Lầu</div>
+          <Link to="/" className="text-2xl font-bold text-white italic">Lầu</Link>
 
           {/* Desktop nav */}
           <div className="hidden md:flex space-x-8">

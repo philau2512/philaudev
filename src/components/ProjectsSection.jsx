@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const ProjectsSection = React.forwardRef(({ projects }, ref) => (
   <section ref={ref} className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/50">
@@ -9,8 +10,9 @@ const ProjectsSection = React.forwardRef(({ projects }, ref) => (
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
         {projects.map((project, index) => (
-          <div
+          <Link
             key={index}
+            to={`/project/${index}`}
             className="relative group overflow-hidden rounded-xl bg-gray-900 hover:transform hover:scale-105 transition-all duration-300 cursor-pointer"
           >
             {/* Background Image */}
@@ -42,7 +44,7 @@ const ProjectsSection = React.forwardRef(({ projects }, ref) => (
               {/* Border */}
               <div className="absolute inset-0 border-2 border-transparent group-hover:border-orange-400/50 transition-all duration-300 rounded-xl" />
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </div>
