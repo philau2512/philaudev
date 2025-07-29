@@ -95,6 +95,28 @@
       "type": "Other Project",
       "tech": "React, Node.js, MongoDB, Tailwind CSS, Java, Spring Boot",
       "link": "#"
+    },
+    {
+      "title": "JOB HUNTLY",
+      "subtitle": "",
+      "description": "A web application for job seekers to find jobs and apply for them. It provides a user-friendly interface for job seekers to find jobs and apply for them.",
+      "details": "",
+      "image": "images/css-project.webp",
+      "size": "Personal",
+      "type": "Other Project",
+      "tech": "React, Node.js, MongoDB, Tailwind CSS, Java, Spring Boot",
+      "link": "#"
+    },
+    {
+      "title": "JOB HUNTLY",
+      "subtitle": "",
+      "description": "A web application for job seekers to find jobs and apply for them. It provides a user-friendly interface for job seekers to find jobs and apply for them.",
+      "details": "",
+      "image": "images/css-project.webp",
+      "size": "Personal",
+      "type": "Other Project",
+      "tech": "React, Node.js, MongoDB, Tailwind CSS, Java, Spring Boot",
+      "link": "#"
     }
   ],
   "workExperience": [
