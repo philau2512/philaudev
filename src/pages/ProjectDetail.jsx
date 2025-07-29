@@ -42,6 +42,15 @@ const ProjectDetail = () => {
     ));
   };
 
+  // Function to handle image paths
+  const getImagePath = (path) => {
+    if (!path) return '';
+    // Check if the path is already a URL
+    return path.startsWith('http://') || path.startsWith('https://') 
+      ? path 
+      : `/${path}`;
+  };
+
   // Function to go back
   const goBack = () => {
     navigate(-1);
@@ -82,7 +91,7 @@ const ProjectDetail = () => {
         {/* Hero Image Section */}
         <div className="w-full h-80 md:h-96 relative">
           <img 
-            src={`/${project.image}`} 
+            src={getImagePath(project.image)} 
             alt={project.title} 
             className="w-full h-full object-cover"
           />

@@ -19,6 +19,12 @@ const HeroSection = React.forwardRef(({ profile = {}, skills = [], scrollToConta
   const isIconUrl = (icon) => {
     return icon && (icon.startsWith('http://') || icon.startsWith('https://'));
   };
+  
+  // Sort skills by level (Basic → Intermediate → Advanced → Expert)
+  const sortedSkills = [...skills].sort((a, b) => {
+    const levelOrder = { "Basic": 1, "Intermediate": 2, "Advanced": 3, "Expert": 4 };
+    return levelOrder[a.level] - levelOrder[b.level];
+  });
 
   return (
   <section
@@ -98,8 +104,8 @@ const HeroSection = React.forwardRef(({ profile = {}, skills = [], scrollToConta
       {/* Skills */}
       <div className="mt-16">
         <h3 className="text-sm uppercase tracking-wider text-gray-400 mb-8">EXPERIENCE WITH</h3>
-        <div className="flex flex-wrap justify-center gap-6">
-          {skills.map((skill, index) => (
+        <div className="flex flex-wrap justify-center gap-6 sm:grid sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 sm:gap-4 md:gap-6">
+          {sortedSkills.map((skill, index) => (
             <div key={index} className="group relative flex flex-col items-center">
               {/* Icon */}
               <div

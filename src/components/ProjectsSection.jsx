@@ -18,7 +18,16 @@ const ProjectsSection = React.forwardRef(({ projects }, ref) => {
   }, []);
 
   // Get the projects to display
-  const visibleProjects = isMobile && !showAll ? projects.slice(0, 2) : projects;
+  const visibleProjects = isMobile && !showAll ? projects.slice(0, 3) : projects;
+
+  // Function to handle image paths
+  const getImagePath = (path) => {
+    if (!path) return '';
+    // Check if the path is already a URL
+    return path.startsWith('http://') || path.startsWith('https://') 
+      ? path 
+      : `/${path}`;
+  };
 
   return (
     <section ref={ref} className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/50">
@@ -37,7 +46,7 @@ const ProjectsSection = React.forwardRef(({ projects }, ref) => {
               {/* Background Image */}
               <div className="relative h-52 overflow-hidden">
                 <img
-                  src={project.image}
+                  src={getImagePath(project.image)}
                   alt={project.title}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
@@ -67,8 +76,8 @@ const ProjectsSection = React.forwardRef(({ projects }, ref) => {
           ))}
         </div>
 
-        {/* View More Button (only on mobile when there are more than 2 projects) */}
-        {isMobile && projects.length > 2 && (
+        {/* View More Button (only on mobile when there are more than 3 projects) */}
+        {isMobile && projects.length > 3 && (
           <div className="mt-8 text-center">
             <button
               onClick={() => setShowAll(!showAll)}
