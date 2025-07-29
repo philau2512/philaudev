@@ -15,6 +15,11 @@ const HeroSection = React.forwardRef(({ profile = {}, skills = [], scrollToConta
   const truncatedDescription = truncateText(descriptionText, 150);
   const shouldTruncate = descriptionText.length > 150;
 
+  // Function to determine if an icon is a URL or a FontAwesome icon
+  const isIconUrl = (icon) => {
+    return icon && (icon.startsWith('http://') || icon.startsWith('https://'));
+  };
+
   return (
   <section
     ref={ref}
@@ -100,7 +105,15 @@ const HeroSection = React.forwardRef(({ profile = {}, skills = [], scrollToConta
               <div
                 className="w-16 h-16 bg-gray-800 rounded-lg flex items-center justify-center text-2xl hover:bg-gray-700 transition-all duration-300 transform hover:scale-110 border border-gray-700 hover:border-orange-400"
               >
-                <i className={`${skill.icon} ${skill.color}`} />
+                {isIconUrl(skill.icon) ? (
+                  <img 
+                    src={skill.icon} 
+                    alt={skill.name} 
+                    className="w-8 h-8 object-contain" 
+                  />
+                ) : (
+                  <i className={`${skill.icon} ${skill.color}`} />
+                )}
               </div>
               {/* Label */}
               <div className="mt-2 text-center text-xs">

@@ -19,13 +19,13 @@
       "color": "text-green-500"
     },
     {
-      "name": "HTML5",
+      "name": "HTML",
       "level": "Expert",
       "icon": "fab fa-html5",
       "color": "text-orange-500"
     },
     {
-      "name": "CSS3",
+      "name": "CSS",
       "level": "Expert",
       "icon": "fab fa-css3-alt",
       "color": "text-blue-500"
@@ -49,9 +49,9 @@
       "color": "text-red-500"
     },
     {
-      "name": "Vue.js",
+      "name": "Solidity",
       "level": "Basic",
-      "icon": "fab fa-vuejs",
+      "icon": "https://img.icons8.com/color/48/solidity.png",
       "color": "text-emerald-400"
     }
   ],
@@ -109,6 +109,13 @@
       "logo": "https://ktc.likelion.edu.vn/apple-icon.png?7007cca3c8db8fbf",
       "logoColor": "text-gray-300",
       "description": "Received training in software development using a variety of technologies, while enhancing communication, teamwork, and problem-solving abilities. Contributed to real-world projects, as JobHuntly, gaining hands-on experience in development processes."
+    }
+  ],
+  "certificates": [
+    {
+      "name": "Microsoft Office Specialist",
+      "image": "images/mos.jpg",
+      "file": "documents/CertMOS.pdf"
     }
   ]
 }
