@@ -3,7 +3,7 @@ import React from 'react';
 const ContactSection = React.forwardRef((props, ref) => (
   <section ref={ref} className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/50">
     <div className="max-w-4xl mx-auto text-center">
-      <h2 className="text-4xl md:text-5xl font-bold mb-8">Contact</h2>
+      <h2 className="text-4xl md:text-5xl font-bold mb-8">CONTACT</h2>
       <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
       If you have any questions or concerns about me, please do not hesitate to contact me via the information below.
       </p>

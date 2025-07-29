@@ -1,21 +1,21 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect } from "react";
 
 function NavBar({ activeSection, scrollToSection }) {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [language, setLanguage] = useState('en');
+  const [language, setLanguage] = useState("en");
   const [langOpen, setLangOpen] = useState(false);
   const langRef = useRef(null);
 
   const languages = [
     {
-      code: 'en',
-      label: 'English',
-      flag: '/images/flag-us.webp',
+      code: "en",
+      label: "English",
+      flag: "/images/flag-us.webp",
     },
     {
-      code: 'vi',
-      label: 'Việt Nam',
-      flag: '/images/flag-vn.webp',
+      code: "vi",
+      label: "Việt Nam",
+      flag: "/images/flag-vn.webp",
     },
   ];
 
@@ -26,8 +26,8 @@ function NavBar({ activeSection, scrollToSection }) {
         setLangOpen(false);
       }
     };
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
   const handleNavClick = (section) => {
@@ -35,7 +35,14 @@ function NavBar({ activeSection, scrollToSection }) {
     setMenuOpen(false);
   };
 
-  const navItems = ['Home', 'Projects', 'Experience', 'Contact'];
+  const navItems = [
+    { id: "home", label: "Home" },
+    { id: "education", label: "Education" },
+    { id: "projects", label: "Projects" },
+    { id: "experience", label: "Experience" },
+    { id: "certification", label: "Certification" },
+    { id: "contact", label: "Contact" },
+  ];
 
   return (
     <nav className="fixed top-0 w-full bg-gray-900/95 backdrop-blur-md border-b border-gray-800 z-50">
@@ -47,13 +54,15 @@ function NavBar({ activeSection, scrollToSection }) {
           <div className="hidden md:flex space-x-8">
             {navItems.map((item) => (
               <button
-                key={item}
-                onClick={() => handleNavClick(item.toLowerCase())}
+                key={item.id}
+                onClick={() => handleNavClick(item.id)}
                 className={`px-3 py-2 text-sm font-medium transition-colors duration-300 hover:text-orange-400 ${
-                  activeSection === item.toLowerCase() ? 'text-orange-400' : 'text-gray-300'
+                  activeSection === item.id
+                    ? "text-orange-400"
+                    : "text-gray-300"
                 }`}
               >
-                {item}
+                {item.label}
               </button>
             ))}
           </div>
@@ -69,7 +78,11 @@ function NavBar({ activeSection, scrollToSection }) {
                 <i className="fas fa-chevron-down text-xs ml-1" />
               </button>
               {/* Dropdown */}
-              <div className={`absolute right-0 mt-2 w-40 bg-gray-900 border border-gray-800 rounded-md shadow-lg ${langOpen ? 'block' : 'hidden'}`}>
+              <div
+                className={`absolute right-0 mt-2 w-40 bg-gray-900 border border-gray-800 rounded-md shadow-lg ${
+                  langOpen ? "block" : "hidden"
+                }`}
+              >
                 {languages.map((lang) => (
                   <button
                     key={lang.code}
@@ -78,10 +91,16 @@ function NavBar({ activeSection, scrollToSection }) {
                       setLangOpen(false);
                     }}
                     className={`flex items-center gap-2 w-full px-3 py-2 text-sm text-left hover:bg-gray-800 transition duration-200 ${
-                      language === lang.code ? 'text-orange-400' : 'text-gray-300'
+                      language === lang.code
+                        ? "text-orange-400"
+                        : "text-gray-300"
                     }`}
                   >
-                    <img src={lang.flag} alt={lang.code} className="w-6 h-4 object-cover" />
+                    <img
+                      src={lang.flag}
+                      alt={lang.code}
+                      className="w-6 h-4 object-cover"
+                    />
                     {lang.label}
                   </button>
                 ))}
@@ -90,8 +109,15 @@ function NavBar({ activeSection, scrollToSection }) {
 
             {/* Hamburger */}
             <div className="md:hidden">
-              <button onClick={() => setMenuOpen((prev) => !prev)} className="text-white focus:outline-none">
-                <i className={`fas ${menuOpen ? 'fa-times' : 'fa-bars'} text-2xl`} />
+              <button
+                onClick={() => setMenuOpen((prev) => !prev)}
+                className="text-white focus:outline-none"
+              >
+                <i
+                  className={`fas ${
+                    menuOpen ? "fa-times" : "fa-bars"
+                  } text-2xl`}
+                />
               </button>
             </div>
           </div>
@@ -102,13 +128,15 @@ function NavBar({ activeSection, scrollToSection }) {
           <div className="md:hidden absolute left-0 top-full w-full bg-gray-900 border-t border-gray-800 py-2 z-50">
             {navItems.map((item) => (
               <button
-                key={item}
-                onClick={() => handleNavClick(item.toLowerCase())}
+                key={item.id}
+                onClick={() => handleNavClick(item.id)}
                 className={`block w-full text-left px-6 py-3 text-sm font-medium transition-colors duration-300 hover:bg-gray-800 hover:text-orange-400 ${
-                  activeSection === item.toLowerCase() ? 'text-orange-400' : 'text-gray-300'
+                  activeSection === item.id
+                    ? "text-orange-400"
+                    : "text-gray-300"
                 }`}
               >
-                {item}
+                {item.label}
               </button>
             ))}
           </div>
@@ -123,10 +151,16 @@ function NavBar({ activeSection, scrollToSection }) {
                   key={lang.code}
                   onClick={() => setLanguage(lang.code)}
                   className={`flex items-center gap-2 px-3 py-2 rounded-md transition-colors duration-300 hover:bg-gray-800 ${
-                    language === lang.code ? 'bg-gray-800 text-orange-400' : 'text-gray-300'
+                    language === lang.code
+                      ? "bg-gray-800 text-orange-400"
+                      : "text-gray-300"
                   }`}
                 >
-                  <img src={lang.flag} alt={lang.code} className="w-6 h-4 object-cover" />
+                  <img
+                    src={lang.flag}
+                    alt={lang.code}
+                    className="w-6 h-4 object-cover"
+                  />
                   {lang.label}
                 </button>
               ))}
@@ -138,4 +172,4 @@ function NavBar({ activeSection, scrollToSection }) {
   );
 }
 
-export default NavBar; 
+export default NavBar;
