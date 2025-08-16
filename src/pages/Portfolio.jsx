@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import { useTranslation } from "react-i18next"; // Thêm import
 import NavBar from "../components/NavBar.jsx";
 import HeroSection from "../components/HeroSection.jsx";
 import ProjectsSection from "../components/ProjectsSection.jsx";
@@ -12,6 +13,7 @@ import CertificationSection from "../components/CertificationSection.jsx";
 function Portfolio() {
   const location = useLocation();
   const [activeSection, setActiveSection] = useState("home");
+  const { i18n } = useTranslation(); // Hook i18n
 
   // Section refs
   const homeRef = useRef(null);
@@ -48,16 +50,51 @@ function Portfolio() {
     fetch("/data/data.json")
       .then((res) => res.json())
       .then((data) => {
-        setProfile(data.profile || {});
+        // Xử lý ngôn ngữ cho profile
+        const profileData = {...data.profile};
+        const currentLang = i18n.language;
+        
+        // Cập nhật mô tả theo ngôn ngữ
+        if (profileData[`description_${currentLang}`]) {
+          profileData.description = profileData[`description_${currentLang}`];
+        } else {
+          profileData.description = profileData.description_en || profileData.description;
+        }
+        
+        setProfile(profileData || {});
         setSkills(data.skills || []);
-        setProjects(data.projects || []);
-        setWorkExperience(data.workExperience || []);
-        setEducation(data.education || []);
+        
+        // Xử lý ngôn ngữ cho projects
+        const projectsData = data.projects?.map(project => {
+          const projectWithLang = {...project};
+          projectWithLang.description = project[`description_${currentLang}`] || project.description_en || project.description;
+          projectWithLang.details = project[`details_${currentLang}`] || project.details_en || project.details;
+          return projectWithLang;
+        });
+        setProjects(projectsData || []);
+        
+        // Xử lý ngôn ngữ cho work experience
+        const experienceData = data.workExperience?.map(exp => {
+          const expWithLang = {...exp};
+          expWithLang.description = exp[`description_${currentLang}`] || exp.description_en || exp.description;
+          return expWithLang;
+        });
+        setWorkExperience(experienceData || []);
+        
+        // Xử lý ngôn ngữ cho education
+        const educationData = data.education?.map(edu => {
+          const eduWithLang = {...edu};
+          eduWithLang.school = edu[`school_${currentLang}`] || edu.school_en || edu.school;
+          eduWithLang.degree = edu[`degree_${currentLang}`] || edu.degree_en || edu.degree;
+          return eduWithLang;
+        });
+        setEducation(educationData || []);
+        
         setCertificates(data.certificates || []);
         setContacts(data.contacts && data.contacts[0] || {});
       })
       .catch((err) => console.error("Failed to load portfolio data:", err));
-  }, []);
+  }, [i18n.language]); // Thêm i18n.language vào dependency để chạy lại khi thay đổi ngôn ngữ
 
   // Handle hash navigation when page loads
   useEffect(() => {

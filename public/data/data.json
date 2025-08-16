@@ -1,9 +1,11 @@
 {
   "profile": {
-    "name": "DO PHI LAU",
+    "name_en": "DO PHI LAU",
+    "name_vi": "ĐỖ PHI LẦU",
     "role": "BACKEND DEVELOPER",
     "avatar": "images/avatar.jpg",
-    "description": "I am a software developer with hands-on experience in both web and blockchain development. I have worked on both front-end and back-end, and thrive in agile environments. With over a year of experience, and projects both large and small, I look forward to continuing to grow in the technology field and contributing to innovative projects."
+    "description_en": "I am a software developer with hands-on experience in both web and blockchain development. I have worked on both front-end and back-end, and thrive in agile environments. With over a year of experience, and projects both large and small, I look forward to continuing to grow in the technology field and contributing to innovative projects.",
+    "description_vi": "Tôi là một nhà phát triển phần mềm với kinh nghiệm thực tế về cả phát triển web và blockchain. Tôi đã làm việc cả ở front-end và back-end, và phát triển trong môi trường agile. Với hơn một năm kinh nghiệm, và các dự án lớn nhỏ, tôi mong muốn tiếp tục phát triển trong lĩnh vực công nghệ và đóng góp vào các dự án đổi mới."
   },
   "skills": [
     {
@@ -81,16 +83,20 @@
   ],
   "education": [
     {
-      "school": "HCM City University of Science",
-      "degree": "Information Technology",
+      "school_en": "HCM City University of Science",
+      "school_vi": "Trường Đại học Khoa học Tự nhiên TP.HCM",
+      "degree_en": "Information Technology",
+      "degree_vi": "Công nghệ Thông tin",
       "period": "2024-2027",
       "gpa": "",
       "logo": "images/hcmus.jpg",
       "logoColor": "text-yellow-400"
     },
     {
-      "school": "University of Medicine and Pharmacy at HCMC",
-      "degree": "Laboratory Medicine Technique",
+      "school_en": "University of Medicine and Pharmacy at HCMC",
+      "school_vi": "Trường Đại học Y Dược TP.HCM",
+      "degree_en": "Laboratory Medicine Technique",
+      "degree_vi": "Kỹ thuật Xét nghiệm Y học",
       "period": "2020 - 2024",
       "gpa": "",
       "logo": "images/ump.png",
@@ -101,8 +107,10 @@
     {
       "title": "JOB HUNTLY",
       "subtitle": "",
-      "description": "A web application for job seekers to find jobs and apply for them. It provides a user-friendly interface for job seekers to find jobs and apply for them.",
-      "details": "",
+      "description_en": "A web application for job seekers to find jobs and apply for them. It provides a user-friendly interface for job seekers to find jobs and apply for them.",
+      "description_vi": "Ứng dụng web giúp người tìm việc tìm kiếm và ứng tuyển công việc. Cung cấp giao diện thân thiện với người dùng để người tìm việc dễ dàng tìm kiếm và ứng tuyển công việc.",
+      "details_en": "",
+      "details_vi": "",
       "image": "https://res.cloudinary.com/dkepitcb7/image/upload/v1755358217/jobhuntly_zwasw3.png",
       "size": "Team",
       "type": "Other Project",
@@ -112,8 +120,10 @@
     {
       "title": "WEBSITE SELLING MEDICAL SUPPLIES",
       "subtitle": "",
-      "description": "An online medical supplies management and sales system that helps store owners track inventory, manage orders, optimize import/export processes, and monitor revenue. With a simple and user-friendly interface, it provides tools such as revenue reports, out-of-stock alerts, and transaction tracking, saving time and improving business efficiency.",
-      "details": "- Inventory management: View, add, edit, delete medical supplies, filter and search in real time.\n- Category management: Manage parent/child categories, count number of products per category.\n- Order and cart management: Track order status, support cash or QR code payment.\n- Revenue statistics: View revenue by day, week, quarter, year, and top-selling products.",
+      "description_en": "An online medical supplies management and sales system that helps store owners track inventory, manage orders, optimize import/export processes, and monitor revenue. With a simple and user-friendly interface, it provides tools such as revenue reports, out-of-stock alerts, and transaction tracking, saving time and improving business efficiency.",
+      "description_vi": "Hệ thống quản lý và bán vật tư y tế trực tuyến giúp chủ cửa hàng theo dõi hàng tồn kho, quản lý đơn hàng, tối ưu hóa quy trình nhập/xuất, và giám sát doanh thu. Với giao diện đơn giản và thân thiện với người dùng, nó cung cấp các công cụ như báo cáo doanh thu, cảnh báo hết hàng, và theo dõi giao dịch, tiết kiệm thời gian và cải thiện hiệu quả kinh doanh.",
+      "details_en": "- Inventory management: View, add, edit, delete medical supplies, filter and search in real time.\n- Category management: Manage parent/child categories, count number of products per category.\n- Order and cart management: Track order status, support cash or QR code payment.\n- Revenue statistics: View revenue by day, week, quarter, year, and top-selling products.",
+      "details_vi": "- Quản lý kho: Xem, thêm, sửa, xóa vật tư y tế, lọc và tìm kiếm theo thời gian thực.\n- Quản lý danh mục: Quản lý danh mục cha/con, đếm số lượng sản phẩm theo danh mục.\n- Quản lý đơn hàng và giỏ hàng: Theo dõi trạng thái đơn hàng, hỗ trợ thanh toán tiền mặt hoặc mã QR.\n- Thống kê doanh thu: Xem doanh thu theo ngày, tuần, quý, năm và sản phẩm bán chạy nhất.",
       "image": "https://res.cloudinary.com/dkepitcb7/image/upload/v1755357935/medical-manage_revhbt.png",
       "size": "Team (Role: Team Leader)",
       "type": "Other Project",
@@ -172,7 +182,8 @@
       "period": "02/06/2025 - 01/08/2025",
       "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnYaC5vYTJwqOy8D4299n6xFy8cLbGeTFZbQ&s",
       "logoColor": "text-blue-500",
-      "description": "Worked as a blockchain programming intern on the NFT Sale Whitelist project, utilizing Solidity for smart contract development. Managed a list of eligible users for participation in NFT sales, ensuring only verified users, meeting specific criteria, were granted access to purchase NFTs during limited sales."
+      "description_en": "Worked as a blockchain programming intern on the NFT Sale Whitelist project, utilizing Solidity for smart contract development. Managed a list of eligible users for participation in NFT sales, ensuring only verified users, meeting specific criteria, were granted access to purchase NFTs during limited sales.",
+      "description_vi": "Làm việc với vai trò thực tập sinh lập trình blockchain trong dự án NFT Sale Whitelist, sử dụng Solidity để phát triển hợp đồng thông minh. Quản lý danh sách người dùng đủ điều kiện tham gia bán NFT, đảm bảo chỉ những người dùng đã xác minh, đáp ứng các tiêu chí cụ thể, mới được cấp quyền mua NFT trong các đợt bán giới hạn."
     },
     {
       "company": "LIKELION",
@@ -180,7 +191,8 @@
       "period": "01/07/2025 - 30/09/2025",
       "logo": "https://ktc.likelion.edu.vn/apple-icon.png?7007cca3c8db8fbf",
       "logoColor": "text-gray-300",
-      "description": "Received training in software development using a variety of technologies, while enhancing communication, teamwork, and problem-solving abilities. Contributed to real-world projects, as JobHuntly, gaining hands-on experience in development processes."
+      "description_en": "Received training in software development using a variety of technologies, while enhancing communication, teamwork, and problem-solving abilities. Contributed to real-world projects, as JobHuntly, gaining hands-on experience in development processes.",
+      "description_vi": "Được đào tạo về phát triển phần mềm sử dụng nhiều công nghệ khác nhau, đồng thời nâng cao khả năng giao tiếp, làm việc nhóm và giải quyết vấn đề. Đã đóng góp vào các dự án thực tế, như JobHuntly, có được kinh nghiệm thực tế trong quy trình phát triển."
     }
   ],
   "certificates": [
