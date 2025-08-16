@@ -12,17 +12,29 @@ const ContactSection = React.forwardRef(({ contacts = {} }, ref) => {
           {t('Contact Info Text')}
         </p>
 
-        {contacts.gmail && (
-          <div className="mb-8">
+        <div className="flex flex-col items-center space-y-4 mb-8">
+          {contacts.gmail && (
             <a
               href={`mailto:${contacts.gmail}`}
-              className="text-orange-400 hover:text-orange-300 transition-colors text-lg"
+              className="text-orange-400 hover:text-orange-300 transition-colors text-lg flex items-center"
             >
               <i className="fas fa-envelope mr-3" />
               {contacts.gmail}
             </a>
-          </div>
-        )}
+          )}
+          
+          {contacts.phone && (
+            <div className="flex space-x-4">
+              <a
+                href={`tel:${contacts.phone}`}
+                className="text-orange-400 hover:text-orange-300 transition-colors text-lg flex items-center"
+              >
+                <i className="fas fa-phone-alt mr-3" />
+                {contacts.phone}
+              </a>
+            </div>
+          )}
+        </div>
 
         <div className="flex justify-center space-x-6">
           {contacts.linkedin && (
@@ -33,16 +45,6 @@ const ContactSection = React.forwardRef(({ contacts = {} }, ref) => {
               className="text-gray-400 hover:text-blue-400 transition-colors text-2xl"
             >
               <i className="fab fa-linkedin" />
-            </a>
-          )}
-          {contacts.twitter && (
-            <a 
-              href={contacts.twitter} 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="text-gray-400 hover:text-blue-300 transition-colors text-2xl"
-            >
-              <i className="fab fa-twitter" />
             </a>
           )}
           {contacts.github && (
