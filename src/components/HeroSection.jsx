@@ -29,7 +29,7 @@ const HeroSection = React.forwardRef(({ profile = {}, skills = [], scrollToConta
   return (
   <section
     ref={ref}
-    className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 min-h-screen flex items-center"
+    className="pt-20 pb-8 px-4 sm:px-6 lg:px-8 min-h-screen flex items-center"
   >
     <div className="max-w-4xl mx-auto text-center">
       {/* Avatar */}
@@ -102,9 +102,9 @@ const HeroSection = React.forwardRef(({ profile = {}, skills = [], scrollToConta
       </div>
 
       {/* Skills */}
-      <div className="mt-16">
+      <div className="mt-16 mb-12">
         <h3 className="text-sm uppercase tracking-wider text-gray-400 mb-8">EXPERIENCE WITH</h3>
-        <div className="flex flex-wrap justify-center gap-6 sm:grid sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 sm:gap-4 md:gap-6">
+        <div className="grid grid-cols-4 md:grid-cols-4 lg:grid-cols-6 gap-4 md:gap-6">
           {sortedSkills.map((skill, index) => (
             <div key={index} className="group relative flex flex-col items-center">
               {/* Icon */}

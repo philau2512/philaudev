@@ -103,12 +103,23 @@
       "subtitle": "",
       "description": "A web application for job seekers to find jobs and apply for them. It provides a user-friendly interface for job seekers to find jobs and apply for them.",
       "details": "",
-      "image": "images/css-project.webp",
+      "image": "https://res.cloudinary.com/dkepitcb7/image/upload/v1755358217/jobhuntly_zwasw3.png",
       "size": "Team",
       "type": "Other Project",
       "tech": "NextJS, MySQL, Tailwind CSS, Java, Spring Boot",
       "link": "#"
     },
+    {
+      "title": "WEBSITE SELLING MEDICAL SUPPLIES",
+      "subtitle": "",
+      "description": "An online medical supplies management and sales system that helps store owners track inventory, manage orders, optimize import/export processes, and monitor revenue. With a simple and user-friendly interface, it provides tools such as revenue reports, out-of-stock alerts, and transaction tracking, saving time and improving business efficiency.",
+      "details": "- Inventory management: View, add, edit, delete medical supplies, filter and search in real time.\n- Category management: Manage parent/child categories, count number of products per category.\n- Order and cart management: Track order status, support cash or QR code payment.\n- Revenue statistics: View revenue by day, week, quarter, year, and top-selling products.",
+      "image": "https://res.cloudinary.com/dkepitcb7/image/upload/v1755357935/medical-manage_revhbt.png",
+      "size": "Team (Role: Team Leader)",
+      "type": "Other Project",
+      "tech": "Frontend: Thymleaf\nBackend: Java, Spring Boot, RESTFul API, MySQL",
+      "link": "https://github.com/casestudy-codegym/medical-supplies-management"
+    }, 
     {
       "title": "GROCERY MANAGEMENT",
       "subtitle": "",
@@ -177,6 +188,13 @@
       "name": "Microsoft Office Specialist",
       "image": "images/mos.jpg",
       "file": "documents/CertMOS.pdf"
+    }
+  ],
+  "contacts": [
+    {
+      "gmail": "dplau25122002@gmail.com",
+      "github": "https://github.com/philau2512",
+      "website": "https://philaudev.vercel.app/"
     }
   ]
 }

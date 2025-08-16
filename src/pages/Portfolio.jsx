@@ -42,6 +42,7 @@ function Portfolio() {
   const [workExperience, setWorkExperience] = useState([]);
   const [education, setEducation] = useState([]);
   const [certificates, setCertificates] = useState([]);
+  const [contacts, setContacts] = useState({});
 
   useEffect(() => {
     fetch("/data/data.json")
@@ -53,6 +54,7 @@ function Portfolio() {
         setWorkExperience(data.workExperience || []);
         setEducation(data.education || []);
         setCertificates(data.certificates || []);
+        setContacts(data.contacts && data.contacts[0] || {});
       })
       .catch((err) => console.error("Failed to load portfolio data:", err));
   }, []);
@@ -148,7 +150,7 @@ function Portfolio() {
 
       <CertificationSection ref={certificationRef} certificates={certificates} />
 
-      <ContactSection ref={contactRef} />
+      <ContactSection ref={contactRef} contacts={contacts} />
 
       <FooterSection />
 
