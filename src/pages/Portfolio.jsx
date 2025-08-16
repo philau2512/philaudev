@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import NavBar from "../components/NavBar.jsx";
 import HeroSection from "../components/HeroSection.jsx";
 import ProjectsSection from "../components/ProjectsSection.jsx";
@@ -9,6 +10,7 @@ import EducationSection from "../components/EducationSection.jsx";
 import CertificationSection from "../components/CertificationSection.jsx";
 
 function Portfolio() {
+  const location = useLocation();
   const [activeSection, setActiveSection] = useState("home");
 
   // Section refs
@@ -55,6 +57,16 @@ function Portfolio() {
       .catch((err) => console.error("Failed to load portfolio data:", err));
   }, []);
 
+  // Handle hash navigation when page loads
+  useEffect(() => {
+    if (location.hash) {
+      const sectionId = location.hash.substring(1); // Remove the # character
+      setTimeout(() => {
+        scrollToSection(sectionId);
+      }, 500); // Short delay to ensure the page is loaded
+    }
+  }, [location]);
+
   // Show scroll-to-top button when near bottom
   useEffect(() => {
     const handleScroll = () => {
@@ -95,6 +107,11 @@ function Portfolio() {
           const section = sections.find((s) => s.ref.current === entry.target);
           if (section) {
             setActiveSection(section.id);
+            
+            // Update URL hash without triggering a new navigation
+            const url = new URL(window.location);
+            url.hash = section.id;
+            window.history.replaceState({}, "", url);
           }
         }
       });

@@ -8,31 +8,31 @@
   "skills": [
     {
       "name": "JavaScript",
-      "level": "Advanced",
+      "level": "Intermediate",
       "icon": "fab fa-js-square",
       "color": "text-yellow-400"
     },
     {
       "name": "Node.js",
-      "level": "Advanced",
+      "level": "Intermediate",
       "icon": "fab fa-node-js",
       "color": "text-green-500"
     },
     {
       "name": "HTML",
-      "level": "Expert",
+      "level": "Basic",
       "icon": "fab fa-html5",
       "color": "text-orange-500"
     },
     {
       "name": "CSS",
-      "level": "Expert",
+      "level": "Basic",
       "icon": "fab fa-css3-alt",
       "color": "text-blue-500"
     },
     {
       "name": "React",
-      "level": "Advanced",
+      "level": "Basic",
       "icon": "fab fa-react",
       "color": "text-cyan-400"
     },
@@ -50,9 +50,33 @@
     },
     {
       "name": "Solidity",
-      "level": "Basic",
+      "level": "Intermediate",
       "icon": "https://img.icons8.com/color/48/solidity.png",
       "color": "text-emerald-400"
+    },
+    {
+      "name": "Java",
+      "level": "Advanced",
+      "icon": "https://img.icons8.com/color/48/java-coffee-cup-logo--v1.png",
+      "color": "text-red-500"
+    },
+    {
+      "name": "Spring Boot",
+      "level": "Advanced",
+      "icon": "https://img.icons8.com/color/48/spring-logo.png",
+      "color": "text-red-500"
+    },
+    {
+      "name": "MySQL",
+      "level": "Intermediate",
+      "icon": "https://img.icons8.com/fluency/48/sql.png",
+      "color": "text-red-500"
+    },
+    {
+      "name": "AI",
+      "level": "Expert",
+      "icon": "https://img.icons8.com/ios/50/chatgpt.png",
+      "color": "text-cyan-500"
     }
   ],
   "education": [
@@ -75,22 +99,59 @@
   ],
   "projects": [
     {
-      "title": "LIBRARY MANAGEMENT SYSTEM",
+      "title": "JOB HUNTLY",
       "subtitle": "",
-      "description": "A web application for managing library resources, including books, users, and borrowing transactions. It provides a user-friendly interface for librarians to manage library operations efficiently.",
-      "image": "images/html-project.webp",
-      "category": "Web Development",
-      "size": "Team Project",
+      "description": "A web application for job seekers to find jobs and apply for them. It provides a user-friendly interface for job seekers to find jobs and apply for them.",
+      "details": "",
+      "image": "images/css-project.webp",
+      "size": "Team",
+      "type": "Other Project",
+      "tech": "NextJS, MySQL, Tailwind CSS, Java, Spring Boot",
       "link": "#"
     },
     {
-      "title": "UNLOCK CSS MAGIC",
-      "subtitle": "STYLE WITH MAGIC",
-      "description": "CSS TUTORIAL",
-      "image": "images/css-project.webp",
-      "category": "Web Development",
-      "size": "Personal Project",
-      "link": "#"
+      "title": "GROCERY MANAGEMENT",
+      "subtitle": "",
+      "description": "This is a grocery management system dedicated to store owners, helping to track inventory, manage orders, optimize import and export processes and calculate profits. With a simple and easy-to-use interface, the system provides support tools such as revenue reports, out-of-stock alerts, and tracking financial transactions, helping grocery owners save time and improve business efficiency.",
+      "details": "- Inventory management: View product list, add, edit, delete products, filter products by multiple conditions, find products in real time.\n- Category management: View category list, add, edit, delete parent and child categories, count the number of products in the category\n- Order and cart management: view order status, cash payment options or QR transfer\n- Revenue statistics: View revenue by day, week, quarter, year, view top selling products.",
+      "image": "https://res.cloudinary.com/dkepitcb7/image/upload/v1753793457/Screenshot_2025-07-29_194918_bqxc9c.png",
+      "size": "Personal",
+      "type": "Other Project",
+      "tech": "Frontend: React, TypeScript\nBackend: Java, Spring Boot, RESTFul API, MySQL",
+      "link": "https://github.com/philau2512/grocery_management"
+    },
+    {
+      "title": "NOTE APP",
+      "subtitle": "",
+      "description": "A simple note taking application using Node.js, Express and MySQL.",
+      "details": "- Create, view, edit and delete notes\n- Categorize notes by category\n- Search notes by content\n- Sort notes by multiple criteria\n- Store data in MySQL database",
+      "image": "https://res.cloudinary.com/dkepitcb7/image/upload/v1752639061/Screenshot_2025-07-16_111040_uvyjcb.png",
+      "size": "Personal",
+      "type": "Other Project",
+      "tech": "Node.js, Express, MySQL",
+      "link": "https://github.com/philau2512/note-app-nodejs"
+    },
+    {
+      "title": "LIBRARY MANAGEMENT SYSTEM",
+      "subtitle": "",
+      "description": "Console-based library management program for managing readers, books and loan/return tickets at the Library.",
+      "details": "- Runs on console\n- Manage readers, books and book borrowing/returning forms at the Library.\n- And some basic statistics.\n- Data is saved in txt file.",
+      "image": "images/library-management.png",
+      "size": "Personal",
+      "type": "School Project",
+      "tech": "C/C++",
+      "link": "https://github.com/philau2512/library_manager_2"
+    },
+    {
+      "title": "NFT Whitelist Sale",
+      "subtitle": "",
+      "description": "A whitelist sale application for NFTs, allowing users added to the whitelist, ensuring only verified users can participate in the sale.",
+      "details": "- Whitelist management by the owner\n- Limited minting per wallet address\n- Maximum supply cap\n- ETH withdrawal functionality for the contract owner",
+      "image": "https://res.cloudinary.com/dkepitcb7/image/upload/v1753175238/Screenshot_2025-07-22_160703_klvs7s.png",
+      "size": "Personal",
+      "type": "Blockchain Intern Project",
+      "tech": "Solidity, Hardhat, React, Tailwind CSS, Ethers.js",
+      "link": "https://github.com/philau2512/AC-Blockchain-Developer-Foundations/tree/main/capstone-project/nft-whitelist-sale-project"
     }
   ],
   "workExperience": [
