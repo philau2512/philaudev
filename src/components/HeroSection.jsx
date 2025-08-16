@@ -1,8 +1,10 @@
 import React from 'react';
 import { useState } from 'react';
+import { useTranslation } from "react-i18next";
 
 const HeroSection = React.forwardRef(({ profile = {}, skills = [], scrollToContact }, ref) => {
   const [expandedDescription, setExpandedDescription] = useState(false);
+  const { t, i18n } = useTranslation(); // Sửa lại để lấy cả i18n
   
   // Function to truncate text to a certain length
   const truncateText = (text, maxLength) => {
@@ -29,7 +31,7 @@ const HeroSection = React.forwardRef(({ profile = {}, skills = [], scrollToConta
   return (
   <section
     ref={ref}
-    className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 min-h-screen flex items-center"
+    className="pt-20 pb-8 px-4 sm:px-6 lg:px-8 min-h-screen flex items-center"
   >
     <div className="max-w-4xl mx-auto text-center">
       {/* Avatar */}
@@ -53,12 +55,12 @@ const HeroSection = React.forwardRef(({ profile = {}, skills = [], scrollToConta
 
       {/* Heading */}
       <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-        {profile.name || 'Your Name'}
+        {i18n.language === 'vi' ? profile.name_vi || profile.name : profile.name_en || profile.name}
         <br />
         <span
           className="text-orange-400 text-2xl md:text-3xl lg:text-5xl whitespace-nowrap"
         >
-          {profile.role || 'Your Role'}
+          {t(profile.role || 'Your Role')}
         </span>
       </h1>
 
@@ -75,11 +77,11 @@ const HeroSection = React.forwardRef(({ profile = {}, skills = [], scrollToConta
           >
             {expandedDescription ? (
               <>
-                Show Less <i className="fas fa-chevron-up ml-1.5 text-xs"></i>
+                {t("Show Less")} <i className="fas fa-chevron-up ml-1.5 text-xs"></i>
               </>
             ) : (
               <>
-                Read More <i className="fas fa-chevron-down ml-1.5 text-xs"></i>
+                {t("Read More")} <i className="fas fa-chevron-down ml-1.5 text-xs"></i>
               </>
             )}
           </button>
@@ -93,18 +95,23 @@ const HeroSection = React.forwardRef(({ profile = {}, skills = [], scrollToConta
           className="bg-white text-gray-900 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
         >
           <i className="fas fa-envelope mr-2" />
-          Get in Touch
+          {t("Contact Me")}
         </button>
-        <button className="border border-gray-600 text-white px-8 py-3 rounded-full font-semibold hover:border-orange-400 hover:text-orange-400 transition-all duration-300">
+        <a 
+          href="/documents/backend_developer_do_phi_lau.pdf" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="border border-gray-600 text-white px-8 py-3 rounded-full font-semibold hover:border-orange-400 hover:text-orange-400 transition-all duration-300"
+        >
           <i className="fas fa-download mr-2" />
-          Download CV
-        </button>
+          {t("Download CV")}
+        </a>
       </div>
 
       {/* Skills */}
-      <div className="mt-16">
-        <h3 className="text-sm uppercase tracking-wider text-gray-400 mb-8">EXPERIENCE WITH</h3>
-        <div className="flex flex-wrap justify-center gap-6 sm:grid sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 sm:gap-4 md:gap-6">
+      <div className="mt-16 mb-12">
+        <h3 className="text-sm uppercase tracking-wider text-gray-400 mb-8">{t("My Skills")}</h3>
+        <div className="grid grid-cols-4 md:grid-cols-4 lg:grid-cols-6 gap-4 md:gap-6">
           {sortedSkills.map((skill, index) => (
             <div key={index} className="group relative flex flex-col items-center">
               {/* Icon */}
@@ -124,7 +131,7 @@ const HeroSection = React.forwardRef(({ profile = {}, skills = [], scrollToConta
               {/* Label */}
               <div className="mt-2 text-center text-xs">
                 <div className="text-white font-medium">{skill.name}</div>
-                <div className="text-gray-400">{skill.level}</div>
+                <div className="text-gray-400">{t(skill.level)}</div>
               </div>
             </div>
           ))}

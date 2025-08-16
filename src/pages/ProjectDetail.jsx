@@ -42,6 +42,17 @@ const ProjectDetail = () => {
     ));
   };
 
+  // Function to format tech stack with line breaks
+  const formatTech = (text) => {
+    if (!text) return '';
+    // Split by newlines and map to paragraphs
+    return text.split('\n').map((line, index) => (
+      <p key={index} className="mb-1">
+        {line}
+      </p>
+    ));
+  };
+
   // Function to handle image paths
   const getImagePath = (path) => {
     if (!path) return '';
@@ -146,7 +157,9 @@ const ProjectDetail = () => {
               {project.tech && (
                 <div className="bg-gray-700/50 rounded-lg p-4">
                   <h3 className="text-sm uppercase tracking-wider text-gray-400 mb-2">Tech Use:</h3>
-                  <p className="font-medium text-white">{project.tech}</p>
+                  <div className="font-medium text-white">
+                    {formatTech(project.tech)}
+                  </div>
                 </div>
               )}
             </div>

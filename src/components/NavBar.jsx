@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
+import { useTranslation } from "react-i18next"; // Thêm import useTranslation
 
 function NavBar({ activeSection, scrollToSection }) {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -7,6 +8,7 @@ function NavBar({ activeSection, scrollToSection }) {
   const [langOpen, setLangOpen] = useState(false);
   const langRef = useRef(null);
   const location = useLocation();
+  const { t, i18n } = useTranslation(); // Sử dụng hook useTranslation
 
   const languages = [
     {
@@ -43,13 +45,20 @@ function NavBar({ activeSection, scrollToSection }) {
     setMenuOpen(false);
   };
 
+  // Thêm hàm xử lý thay đổi ngôn ngữ
+  const changeLanguage = (lng) => {
+    setLanguage(lng);
+    i18n.changeLanguage(lng); // Đổi ngôn ngữ trong i18n
+    setLangOpen(false);
+  };
+
   const navItems = [
-    { id: "home", label: "Home" },
-    { id: "education", label: "Education" },
-    { id: "projects", label: "Projects" },
-    { id: "experience", label: "Experience" },
-    { id: "certification", label: "Certification" },
-    { id: "contact", label: "Contact" },
+    { id: "home", label: t("Home") }, // Sử dụng t() để dịch
+    { id: "education", label: t("Education") },
+    { id: "projects", label: t("Projects") },
+    { id: "experience", label: t("Experience") },
+    { id: "certification", label: t("Certification") },
+    { id: "contact", label: t("Contact") },
   ];
 
   return (
@@ -82,7 +91,7 @@ function NavBar({ activeSection, scrollToSection }) {
                 className="flex items-center gap-1 text-gray-300 hover:text-orange-400 transition-colors duration-300 focus:outline-none"
                 onClick={() => setLangOpen((prev) => !prev)}
               >
-                <span className="text-sm font-medium">Language</span>
+                <span className="text-sm font-medium">{t("Language")}</span>
                 <i className="fas fa-chevron-down text-xs ml-1" />
               </button>
               {/* Dropdown */}
@@ -94,10 +103,7 @@ function NavBar({ activeSection, scrollToSection }) {
                 {languages.map((lang) => (
                   <button
                     key={lang.code}
-                    onClick={() => {
-                      setLanguage(lang.code);
-                      setLangOpen(false);
-                    }}
+                    onClick={() => changeLanguage(lang.code)}
                     className={`flex items-center gap-2 w-full px-3 py-2 text-sm text-left hover:bg-gray-800 transition duration-200 ${
                       language === lang.code
                         ? "text-orange-400"
@@ -157,7 +163,7 @@ function NavBar({ activeSection, scrollToSection }) {
               {languages.map((lang) => (
                 <button
                   key={lang.code}
-                  onClick={() => setLanguage(lang.code)}
+                  onClick={() => changeLanguage(lang.code)}
                   className={`flex items-center gap-2 px-3 py-2 rounded-md transition-colors duration-300 hover:bg-gray-800 ${
                     language === lang.code
                       ? "bg-gray-800 text-orange-400"
