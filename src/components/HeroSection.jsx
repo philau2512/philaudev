@@ -95,10 +95,15 @@ const HeroSection = React.forwardRef(({ profile = {}, skills = [], scrollToConta
           <i className="fas fa-envelope mr-2" />
           Get in Touch
         </button>
-        <button className="border border-gray-600 text-white px-8 py-3 rounded-full font-semibold hover:border-orange-400 hover:text-orange-400 transition-all duration-300">
+        <a 
+          href="/documents/backend_developer_do_phi_lau.pdf" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="border border-gray-600 text-white px-8 py-3 rounded-full font-semibold hover:border-orange-400 hover:text-orange-400 transition-all duration-300"
+        >
           <i className="fas fa-download mr-2" />
           Download CV
-        </button>
+        </a>
       </div>
 
       {/* Skills */}
