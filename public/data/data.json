@@ -177,6 +177,15 @@
   ],
   "workExperience": [
     {
+      "company": "LIKELION",
+      "position": "K-Tech College 2025",
+      "period": "01/07/2025 - 30/09/2025",
+      "logo": "https://ktc.likelion.edu.vn/apple-icon.png?7007cca3c8db8fbf",
+      "logoColor": "text-gray-300",
+      "description_en": "Received training in software development using a variety of technologies, while enhancing communication, teamwork with Agile/Scrum, and problem-solving abilities. Contributed to real-world projects, as JobHuntly, gaining hands-on experience in development processes.",
+      "description_vi": "Được đào tạo về phát triển phần mềm sử dụng nhiều công nghệ khác nhau, đồng thời nâng cao khả năng giao tiếp, làm việc nhóm và giải quyết vấn đề. Đã đóng góp vào các dự án thực tế, như JobHuntly, có được kinh nghiệm thực tế trong quy trình phát triển."
+    },
+    {
       "company": "Apps Cyclone Technology JSC",
       "position": "Intern Blockchain Developer",
       "period": "02/06/2025 - 01/08/2025",
@@ -184,15 +193,6 @@
       "logoColor": "text-blue-500",
       "description_en": "Worked as a blockchain programming intern on the NFT Sale Whitelist project, utilizing Solidity for smart contract development. Managed a list of eligible users for participation in NFT sales, ensuring only verified users, meeting specific criteria, were granted access to purchase NFTs during limited sales.",
       "description_vi": "Làm việc với vai trò thực tập sinh lập trình blockchain trong dự án NFT Sale Whitelist, sử dụng Solidity để phát triển hợp đồng thông minh. Quản lý danh sách người dùng đủ điều kiện tham gia bán NFT, đảm bảo chỉ những người dùng đã xác minh, đáp ứng các tiêu chí cụ thể, mới được cấp quyền mua NFT trong các đợt bán giới hạn."
-    },
-    {
-      "company": "LIKELION",
-      "position": "K-Tech College 2025",
-      "period": "01/07/2025 - 30/09/2025",
-      "logo": "https://ktc.likelion.edu.vn/apple-icon.png?7007cca3c8db8fbf",
-      "logoColor": "text-gray-300",
-      "description_en": "Received training in software development using a variety of technologies, while enhancing communication, teamwork, and problem-solving abilities. Contributed to real-world projects, as JobHuntly, gaining hands-on experience in development processes.",
-      "description_vi": "Được đào tạo về phát triển phần mềm sử dụng nhiều công nghệ khác nhau, đồng thời nâng cao khả năng giao tiếp, làm việc nhóm và giải quyết vấn đề. Đã đóng góp vào các dự án thực tế, như JobHuntly, có được kinh nghiệm thực tế trong quy trình phát triển."
     }
   ],
   "certificates": [
